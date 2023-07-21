@@ -35,7 +35,7 @@ def apriori_algo(data, min_support, min_confidence):
     return itemsets, rules
 
 
-df_binary = pd.read_csv(r'C:\Users\flori\PycharmProjects\pythonProject\preprocessed_file_arm.csv', sep=",")
+df_binary = pd.read_csv(r'preprocessed_file_arm.csv', sep=",")
 df_binary = df_binary.astype(bool).astype(int)
 
 df_cardio_1 = df_binary.drop(columns=['cardio_0'])

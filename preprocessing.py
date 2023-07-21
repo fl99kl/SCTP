@@ -69,7 +69,7 @@ def read_csv(file_path_string):
 
 
 # Specify the path to your CSV file
-df = read_csv('C:/Users/flori/OneDrive/Desktop/cardio_train_cleaned.csv')
+df = read_csv('cardio_train_cleaned.csv')
 header = ''
 
 # Do the preprocessing

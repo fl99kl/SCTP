@@ -6,7 +6,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 from scipy.stats import randint as sp_randint
 
 # Specify the path to your CSV file
-file_path = 'C:/Users/flori/PycharmProjects/pythonProject/preprocessed_file_uncleaned.csv'
+file_path = 'preprocessed_file_uncleaned.csv'
 
 # Open the file in binary mode and read a chunk of data for analysis
 df = pd.read_csv(file_path, delimiter=',')

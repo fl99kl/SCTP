@@ -6,7 +6,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.tree import DecisionTreeClassifier, plot_tree
 
 # Specify the path to your CSV file
-file_path = 'C:/Users/flori/PycharmProjects/pythonProject/preprocessed_file_cleaned_no_preprocessing.csv'
+file_path = 'preprocessed_file_uncleaned.csv'
 
 # Open the file in binary mode and read a chunk of data for analysis
 df = pd.read_csv(file_path, delimiter=',')
@@ -19,11 +19,13 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 # Create LightGBM dataset
 train_data = lgb.Dataset(X_train, label=y_train)
 
+# Create DT instance
 model = DecisionTreeClassifier(criterion='gini', random_state=42, min_samples_split=155, min_impurity_decrease=7.384936101805374e-05)
+# Train model
 model.fit(X_train, y_train)
-
+# predict the test set
 y_pred = model.predict(X_test)
-
+# show accuracy
 accuracy = accuracy_score(y_test, y_pred)
 print(accuracy)
 
